@@ -19,6 +19,7 @@ The **SE104_Jewelery-Store** is a full-stack web application designed to streaml
 - **Frontend**: Reactjs
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL
+- **Chatbot**: Gemini API and Langchain to get data regarding products from database
 - **Tools**:
   - Git for version control.
   - Postman for API testing.
