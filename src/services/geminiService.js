@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { message } from 'antd';
 import { getAccessToken } from '../utils/auth';
-import { signIn } from './userAPI';  // Change import to match available exports
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { PromptTemplate } from "@langchain/core/prompts";
+import { LLMChain } from "langchain/chains";
 import React, { useState, useEffect } from 'react';
 import { Input, Button, Spin } from 'antd';
 
@@ -13,10 +15,10 @@ const SYSTEM_PROMPT = `Bạn là chatbot hỗ trợ khách hàng trong việc ch
 - Không sử dụng ngôn ngữ không phù hợp.
 - Trả lời bằng tiếng Việt.
 - sắp xếp các sản phẩm khi đưa ra cho khách hàng, chỉ cần nói ra tên và giá của sản phẩm.
-- liệt kê các sản phẩm sao cho dễ xem và hiểu,đánh dấu số thứ tự mỗi sản phẩm, mỗi lần liệt kê không quá 5 sản phẩm.
 - Khi chào, hãy giới thiệu mình là chatbot hỗ trợ chọn trang sức và các dịch vụ của cửa hàng.
 - Tập trung vào chủ đề mà khách hàng yêu cầu.
-- Bạn chỉ được phép chào khách hàng khi khách hàng đã chủ động chào trước.
+- Nếu không rõ, hãy tự bịa ra thêm sao cho thu hút được khách.
+- Không phải lúc nào cũng phải chào khách hàng.
 - Không giải đáp các câu hỏi không liên quan đến cửa hàng trang sức.
 - Nếu không chắc chắn, hãy trả lời "Tôi không chắc chắn về điều này".`;
 
@@ -44,50 +46,70 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-// Initialize Gemini with flash model
+// Initialize both Gemini standalone and LangChain
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const geminiModel = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+
+const llm = new ChatGoogleGenerativeAI({
+  modelName: "gemini-1.5-pro",
+  apiKey: process.env.REACT_APP_GEMINI_API_KEY,
+  temperature: 0.7,
+});
 
 export const chatbotApi = {
   sendMessage: async (message) => {
     try {
-      // Get real-time product data
       const productsResponse = await axiosInstance.get('/product/get-all');
       const products = productsResponse.data;
 
-      // Process user message with Gemini
-      const context = `
-        ${SYSTEM_PROMPT}
-        Sản phẩm trong cửa hàng:
-        ${products.map((p, index) => `
-          ${index + 1}. [Mã: ${p.MaSanPham}] ${p.TenSanPham} - ${p.DonGia.toLocaleString('vi-VN')}VND
-          Chi tiết: ${p.MoTa || 'Chưa có mô tả'}
-          Loại: ${p.category?.TenLoaiSanPham || 'Chưa phân loại'}
-          Tồn kho: ${p.SoLuong} chiếc
-        `).join('\n')}
-        
-        Tin nhắn khách hàng: ${message}
-      `;
+      const formattedProducts = products.slice(0, 5).map((p, index) => `
+        ${index + 1}. ${p.TenSanPham} - ${p.DonGia.toLocaleString('vi-VN')}VND
+        Chi tiết: ${p.MoTa || 'Chưa có mô tả'}
+        Loại: ${p.category?.TenLoaiSanPham || 'Chưa phân loại'}
+      `).join('\n');
 
-      const result = await model.generateContent(context);
-      const botResponse = result.response.text();
+      // Create LangChain prompt template
+      const promptTemplate = PromptTemplate.fromTemplate(`
+        {systemPrompt}
+        
+        Sản phẩm trong cửa hàng:
+        {products}
+        
+        Tin nhắn khách hàng: {input}
+        
+        Hãy trả lời khách hàng một cách chuyên nghiệp và hữu ích.
+      `);
+
+      const chain = new LLMChain({
+        llm,
+        prompt: promptTemplate
+      });
+
+      const result = await chain.call({
+        systemPrompt: SYSTEM_PROMPT,
+        products: formattedProducts,
+        input: message
+      });
+
+      const botResponse = result.text;
 
       // Save conversation
       const userId = localStorage.getItem('MaTaiKhoan') || 
                     JSON.parse(localStorage.getItem('userData'))?.userId;
 
       if (userId) {
-        await axiosInstance.post('/chatbot/message', {
-          MaTaiKhoan: parseInt(userId),
-          TinNhan: message,
-          RoleTinNhan: 'user'
-        });
-
-        await axiosInstance.post('/chatbot/message', {
-          MaTaiKhoan: parseInt(userId),
-          TinNhan: botResponse,
-          RoleTinNhan: 'bot'
-        });
+        await Promise.all([
+          axiosInstance.post('/chatbot/message', {
+            MaTaiKhoan: parseInt(userId),
+            TinNhan: message,
+            RoleTinNhan: 'user'
+          }),
+          axiosInstance.post('/chatbot/message', {
+            MaTaiKhoan: parseInt(userId),
+            TinNhan: botResponse,
+            RoleTinNhan: 'bot'
+          })
+        ]);
       }
 
       return botResponse;
