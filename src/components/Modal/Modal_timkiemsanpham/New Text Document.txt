@@ -1,0 +1,54 @@
+/* ProductSearchModal.css */
+.product-search-modal {
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 60%; /* Move right by increasing left percentage */
+  transform: translate(-50%, -50%);
+}
+
+.product-search-modal .ant-modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  position: sticky;
+  top: 0;
+}
+.product-search-modal .ant-modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.product-search-modal .ant-modal {
+  top: 20px !important; /* Force modal higher up */
+}
+.product-search-modal .ant-modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-search-modal .ant-modal-body {
+  padding: 16px;
+  max-height: calc(80vh - 110px); /* Account for header/footer */
+  overflow-y: auto;
+}
+.product-search-modal .ant-input-search {
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.product-search-modal .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-search-modal .ant-table-thead > tr > th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.product-search-modal .ant-table-tbody > tr > td {
+  padding: 12px;
+}
+
+.product-search-modal .ant-btn-primary {
+  border-radius: 8px;
+}

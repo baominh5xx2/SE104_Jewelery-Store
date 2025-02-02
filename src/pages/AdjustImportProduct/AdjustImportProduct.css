@@ -1,0 +1,204 @@
+.create-import-order-container2{
+        margin-left: 270px;
+        padding: 20px;
+        min-height: 120vh;
+
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header h2 {
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .header-actions button {
+      margin-left: 10px;
+      height: 40px;
+    }
+    
+    /* Container chính */
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Giãn cách giữa các container */
+    }
+    
+    /* Container từng phần */
+    .form-section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #dcdcdc;
+    }
+    
+    .form-section:hover {
+      border-color: #40a9ff;
+      background-color: #f4faff;
+    }
+    
+    .form-section h3 {
+      font-size: 20px;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    
+    .form-section h4 {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    
+    /* Các ô nhập liệu */
+    .form-section input,
+    .form-section textarea,
+    .form-section .ant-input,
+    .form-section .ant-picker {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+      padding: 8px 12px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+    
+    .form-section input:focus,
+    .form-section textarea:focus,
+    .form-section .ant-input:focus,
+    .form-section .ant-picker-focused {
+      border-color: #40a9ff;
+      box-shadow: 0 0 4px rgba(64, 169, 255, 0.4);
+    }
+    
+    .form-section textarea {
+      resize: none;
+      height: auto;
+    }
+    
+    .form-section .ant-input,
+    .form-section .ant-select,
+    .form-section .ant-btn {
+      margin-right: 10px;
+    }
+    
+    /* Các nút */
+    button {
+      border-radius: 5px;
+    }
+    
+    .submit-button {
+      margin-top: 20px;
+      width: 100%;
+      height: 45px;
+      background-color: #091057;
+      color: #cdd1ff;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .save-button {
+      background-color: #091057;
+      color: #cdd1ff;
+    }
+    
+    .submit-button:hover {
+      background-color: #1890ff;
+    }
+    
+    /* Flex giữa Nhân viên xử lý và Chi phí */
+    .flex-container {
+      display: flex;
+      gap: 30px; /* Giãn cách giữa 2 box lớn */
+    }
+    
+    .half-width {
+      width: 50%;
+    }
+    
+    /* Collapse (Chi phí mua hàng) */
+    .ant-collapse {
+      background-color: transparent;
+      border: none;
+    }
+    
+    .ant-collapse-header {
+      font-size: 14px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    .ant-collapse-content {
+      border-top: none;
+    }
+    
+    /* Chi phí mua hàng hiển thị */
+    .cost-summary p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .cost-summary strong {
+      color: #1890ff;
+    }
+    
+    /* Tải file danh sách */
+    .upload-box {
+      text-align: center;
+      margin-top: 10px;
+      color: #888;
+      font-size: 12px;
+      font-style: italic;
+    }
+    
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    
+    .form-actions .ant-btn {
+      min-width: 100px;
+    }
+    
+    .ant-table {
+      margin-top: 16px;
+    }
+    
+    .ant-table-thead > tr > th {
+      background-color: #fafafa;
+      font-weight: bold;
+    }
+    
+    .ant-table-tbody > tr > td {
+      background-color: #fff;
+    }
+    
+    .ant-modal {
+      border-radius: 8px;
+    }
+    
+    .ant-modal-header {
+      border-radius: 8px 8px 0 0;
+      background-color: #fafafa;
+    }
+    
+    .ant-modal-footer {
+      border-radius: 0 0 8px 8px;
+      background-color: #fafafa;
+    }
+    }

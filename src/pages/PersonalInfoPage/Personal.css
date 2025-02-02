@@ -1,0 +1,169 @@
+    .personal-infoo{
+    @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Forum&family=Nunito:wght@200..1000&family=Poppins:wght@400;500;600;700&display=swap');
+
+    .store-info {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Nunito", sans-serif;
+    }
+
+
+    body {
+        min-height: 100vh;
+        background: #FFFFFF;
+    }
+
+
+
+    .account-info {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+        
+    }
+
+
+
+
+
+    #content nav .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+
+    .ant-form-item-label {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+
+    .ant-input {
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+    }
+
+
+    .ant-btn {
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: #e6f7ff; /* Màu nền xanh nhạt */
+        border: 1px solid #1890ff; /* Viền màu xanh */
+        color: #1890ff; /* Màu chữ */
+        padding: 6px 20px; /* Khoảng cách bên trong */
+        font-weight: bold; /* Chữ in đậm */
+        border-radius: 10px; /* Bo góc nút */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng hover */
+    }
+
+
+
+
+    .ant-btn-primary {
+        background-color: #1890ff;
+        border-color: #1890ff;
+        color: white;
+    }
+
+
+    .ant-btn-primary:hover {
+        background-color: #40a9ff;
+        border-color: #40a9ff;
+    }
+
+
+    /*Định dạng nút đổi mật khẩu*/
+    .ant-btn-secondary {
+        background-color: #e6f7ff; /* Màu nền xanh nhạt */
+        border: 1px solid #1890ff; /* Viền màu xanh */
+        color: #1890ff; /* Màu chữ */
+        padding: 6px 20px; /* Khoảng cách bên trong */
+        font-weight: bold; /* Chữ in đậm */
+        border-radius: 10px; /* Bo góc nút */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng hover */
+    }
+
+
+    .ant-btn-secondary:hover {
+        background-color: #bae7ff; /* Màu nền đậm hơn khi hover */
+        color: #096dd9; /* Màu chữ đậm hơn khi hover */
+    }
+
+
+    #changePasswordModal {
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        z-index: 1050;
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+    .ant-modal-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+
+    .ant-modal-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+
+    .ant-modal {
+        background: white;
+        width: 500px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-top: -150px;
+    }
+
+
+    .ant-modal-header {
+        background: #1890ff;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+    .ant-modal-body {
+        padding: 20px;
+    }
+
+
+    .ant-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px;
+        gap: 10px;
+        border-top: 1px solid #f0f0f0;
+    }
+    }
+}

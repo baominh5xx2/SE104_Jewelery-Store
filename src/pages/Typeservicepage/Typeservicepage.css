@@ -1,0 +1,245 @@
+.type-product-page {
+    margin-left: 270px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  
+    /* Table container */
+    .ant-table-wrapper {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+  
+    .ant-table {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+  
+    /* Header styling */
+    .type-product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+      }
+    }
+  
+    /* Filter section styling */
+    .filter-section {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+  
+      .filter-button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    
+      .delete-all-button {
+        margin-left: auto;
+        margin-bottom: -20px;
+      }
+    }
+  
+    /* Button styling */
+    .export-button {
+      background-color: #cdd1ff;
+      color: #091057;
+      border: none;
+      &:hover {
+        background-color: #091057;
+        color: white;
+      }
+    }
+  
+    .add-type-button {
+      background-color: #091057;
+      color: white;
+      border: none;
+      &:hover {
+        background-color: #cdd1ff;
+        color: #091057;
+      }
+    }
+  
+    /* Table styles */
+    .ant-table-thead > tr > th {
+      background: #f8f9fa;
+      color: #333;
+      font-weight: 600;
+      padding: 16px;
+      text-align: left !important;
+    }
+  
+    .ant-table-tbody > tr > td {
+      padding: 16px;
+      text-align: left !important;
+    }
+  
+    .ant-table-tbody > tr:hover > td {
+      background: #f5f5f5;
+    }
+  
+    /* Header actions */
+    .header-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 15px;
+      width: 100%;
+    }
+  
+    .right-buttons {
+      display: flex;
+      gap: 15px;
+      float: right; /* Add float right */
+    }
+  
+    .search-box {
+      width: 100%;
+    }
+  
+    .left-buttons {
+      display: flex;
+      gap: 10px;
+    }
+  
+    /* Buttons */
+    .action-button {
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-weight: 500;
+    }
+  
+    .add-button {
+      background-color: #091057;
+      color: white;
+      border: none;
+      &:hover {
+        background-color: #cdd1ff;
+        color: #091057;
+      }
+    }
+  
+    .export-button {
+      background-color: #cdd1ff;
+      color: #091057;
+      border: none;
+      &:hover {
+        background-color: #091057;
+        color: white;
+      }
+    }
+    /* Container styles */
+  .type-product-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styles */
+  .type-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 0; /* Remove any right padding */
+  }
+  
+  .header-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Table styles */
+  .ant-table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .ant-table-thead > tr > th {
+    background: #f5f5f5;
+    font-weight: 600;
+    text-align: left !important;  /* Force left alignment */
+  }
+  
+  .ant-table-tbody > tr:hover > td {
+    background: #f0f7ff;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 16px;
+    text-align: left !important;  /* Force left alignment */
+  }
+  
+  /* Filter section */
+  .filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* Action buttons */
+  .action-button {
+    min-width: 100px;
+    height: 36px;
+    border-radius: 6px;
+  }
+  
+  .add-button {
+    background-color: #091057;
+      color: white;
+      border: none;
+      &:hover {
+        background-color: #cdd1ff;
+        color: #091057;
+      }
+  }
+  
+  .export-button {
+    background-color: #cdd1ff;
+    color: #091057;
+    border: none;
+    &:hover {
+      background-color: #091057;
+      color: white;
+    }
+  }
+  
+  /* Modal styles */
+  .ant-modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 24px;
+  }
+  
+  .ant-modal-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 16px;
+  }
+  
+  /* Form styles */
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .ant-input,
+  .ant-select {
+    border-radius: 6px;
+  }
+  
+  }

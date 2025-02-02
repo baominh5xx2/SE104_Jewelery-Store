@@ -1,0 +1,221 @@
+.app-layout-signin{
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  }
+
+  /* Header Styling */
+  .headerr {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #096cc8 !important; ;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  /* Logo */
+  .logo-image {
+    height: 60px;
+    width: auto !important;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-image:hover {
+    transform: scale(1.05);
+  }
+
+  /* Icons and Search */
+  .icons-and-search {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 350px;
+  }
+  .header-icon2{
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .header-icon1{
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .header-icon1:hover,
+  .header-icon2:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  /* Search Input */
+  .search-input {
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .search-input input {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+  }
+
+  .search-input:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Content container centering */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  }
+
+  /* Sign In container positioning */
+  .signin-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    margin-top: 35px; /* Adjust for header height */
+  }
+
+
+  /* Form Elements */
+  .ant-form-item-label > label {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+
+  .ant-input-affix-wrapper {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1.5px solid #e8e8e8;
+    transition: all 0.3s ease;
+  }
+
+  .ant-input-affix-wrapper:hover,
+  .ant-input-affix-wrapper:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  }
+
+  .ant-btn-primary {
+    height: 45px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #1890ff 0%, #40a9ff 100%);
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .ant-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(24, 144, 255, 0.25);
+    background: linear-gradient(90deg, #40a9ff 0%, #69c0ff 100%);
+  }
+
+  /* Links */
+  .signin-links {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .signin-links a {
+    color: #1890ff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .signin-links a:hover {
+    color: #40a9ff;
+    text-decoration: underline;
+  }
+
+  /* Title */
+  .ant-typography {
+    font-weight: 600;
+    margin-bottom: 30px !important;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-content {
+      padding: 0 20px;
+    }
+
+    .logo-image {
+      height: 40px;
+    }
+
+    .search-input {
+      width: 220px;
+    }
+
+    .icons-and-search {
+      gap: 15px;
+    }
+
+    .signin-container {
+      margin: 20px;
+      padding: 30px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .search-input {
+      width: 160px;
+    }
+
+    .header-icon1,
+    .header-icon2 {
+      width: 24px;
+      height: 24px;
+    }
+
+    .signin-container {
+      padding: 25px 15px;
+    }
+  }
+}

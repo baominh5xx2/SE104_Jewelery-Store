@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+.unit{
+  margin-left: 270px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  /* Table container */
+  .ant-table-wrapper {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /* Hide both scrollbars */
+  }
+  .table-containerr {
+    width: 100%;
+  }
+  /* Add this to ensure proper table layout */
+  .ant-table {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow-x: hidden !important; /* Hide horizontal scrollbar */
+  }
+
+  .ant-table-body {
+    overflow: hidden !important; /* Hide both scrollbars */
+  }
+
+  .ant-table-container {
+    overflow: hidden !important; /* Hide both scrollbars */
+  }
+
+  /* Header styling */
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      width: 100%;
+    }
+  }
+
+  .filter-section {
+    display: flex;
+    justify-content: flex-end;  /* Changed from space-between to flex-end */
+    margin-bottom: 20px;
+
+    .filter-button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .filter-btn {
+        margin-right: 8px;
+        &.active {
+            background-color: #e6f7ff;
+            border-color: #91d5ff;
+            color: #1890ff;
+        }
+    }
+}
+
+  /* Button styling */
+  .export-button {
+    
+    background-color: #cdd1ff;
+    color: #091057;
+    border: none;
+    &:hover {
+      background-color: #091057;
+      color: white;
+    }
+  }
+
+  .add-product-button {
+    background-color: #091057;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: #cdd1ff;
+      color: #091057;
+    }
+  }
+}
+
+.ant-modal {
+  z-index: 1001 !important; /* Increase z-index */
+}
+
+.ant-modal-mask {
+  z-index: 1000 !important;
+}
+
+.ant-modal-wrap {
+  z-index: 1001 !important;
+}
+
+body .ant-modal-root {
+  z-index: 1001 !important;
+}
+
+.unit {
+  position: relative;
+  z-index: 1;
+}

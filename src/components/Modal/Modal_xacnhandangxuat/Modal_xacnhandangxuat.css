@@ -1,0 +1,16 @@
+/* src/components/Modal/Modal_xacnhandangxuat/Modal_xacnhandangxuat.css */
+.ant-modal-content {
+    border-radius: 8px;
+  }
+  
+  .ant-modal-header {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .ant-modal-footer {
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .ant-btn-primary {
+    background-color: #1890ff;
+  }

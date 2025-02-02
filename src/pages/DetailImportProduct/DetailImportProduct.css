@@ -1,0 +1,173 @@
+.product-detail {
+    margin-left: 270px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+  
+    h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+  
+    .section {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+  
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  
+    .section:last-child {
+      margin-bottom: 0;
+    }
+  
+    input,
+    textarea,
+    .ant-input,
+    .ant-input-number,
+    .ant-select-selector {
+      border-radius: 4px;
+      padding: 8px 12px;
+      border: 1px solid #d9d9d9;
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    input:focus,
+    textarea:focus,
+    .ant-input:focus,
+    .ant-input-number-focused,
+    .ant-select-focused .ant-select-selector {
+      border-color: #1890ff;
+      box-shadow: 0 0 3px rgba(24, 144, 255, 0.5);
+    }
+  
+    .ant-btn {
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  
+    .ant-btn-primary {
+      background-color: #1890ff;
+      border-color: #1890ff;
+    }
+  
+    .ant-btn-primary:hover {
+      background-color: #40a9ff;
+      border-color: #40a9ff;
+    }
+  
+    .ant-btn-danger {
+      background-color: #ff4d4f;
+      border-color: #ff4d4f;
+    }
+  
+    .ant-btn-danger:hover {
+      background-color: #ff7875;
+      border-color: #ff7875;
+    }
+  
+    .ant-upload {
+      border: 2px dashed #d9d9d9;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.3s ease-in-out;
+    }
+  
+    .ant-upload:hover {
+      border-color: #1890ff;
+    }
+  
+    .ant-upload .anticon {
+      color: #1890ff;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  
+    .ant-upload-list-item {
+      border-radius: 4px;
+    }
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+    }
+  
+    button {
+      font-family: inherit;
+    }
+  
+    .ant-input-number {
+      width: 100%;
+    }
+  
+    .label-box-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+  
+    .label-box-group label {
+      margin-bottom: 8px;
+    }
+    .delete-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-left: -30px;
+      margin-bottom: -20px;
+    }
+  
+    .form-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      bottom: 20px;
+      right: 20px;
+      width: 100%;
+    }
+  
+    .return-button {
+      background-color: #cdd1ff;
+      color: #091057;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .save-button {
+      background-color: #091057;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }

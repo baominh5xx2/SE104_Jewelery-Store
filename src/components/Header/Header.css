@@ -1,0 +1,116 @@
+.main-content {
+    padding: 30px;
+    margin-left: -35px;
+  
+  .content-header {
+    margin-left: 350px;
+    margin-top: 25px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    
+  }
+  .header-actionss {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 1078px;
+    border-radius: 10px !important;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 10px;
+    margin-right: 300px;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 1000px;
+    height: 70px;
+  }
+  .search-box .ant-input-affix-wrapper {
+    border: 3px solid #bcbaba; /* Màu viền */
+    border-radius: 10px; /* Bo tròn góc */
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    padding: 0px 10px; /* Khoảng cách bên trong */
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    transition: border-color 0.3s ease; /* Hiệu ứng hover */
+    height: 100%;
+    line-height: normal;
+  }
+  
+  /* Khi hover vào thanh tìm kiếm */
+  .search-box .ant-input-affix-wrapper:hover {
+    border-color: rgba(27,119,254,255); /* Màu viền khi hover */
+  }
+  
+    .search-box .ant-input-affix-wrapper:focus-within {
+    border-color: rgba(27,119,254,255); /* Màu viền khi focus */
+    box-shadow: 0 0 5px rgba(27,119,254,255); /* Hiệu ứng đổ bóng */
+  }
+ .export-bttn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f7ff; /* Màu xanh nhạt */
+  color: rgba(27,119,254,255); /* Màu chữ xanh */
+  border: 1px solid #91d5ff; /* Viền màu xanh nhạt */
+  border-radius: 8px !important; /* Góc bo tròn */
+  padding: 8px 16px; /* Kích thước padding */
+  font-weight: 500; /* Chữ in vừa */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng hover */
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+/* Hover cho nút "Xuất" */
+.export-btn:hover {
+  background-color: #bae7ff; /* Màu nền xanh hover */
+  border-color: rgba(27,119,254,255); /* Viền đậm hơn */
+}
+
+/* Nút "Thêm" */
+.add-btnn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(27,119,254,255); /* Màu xanh đậm */
+  color: #fff; /* Màu chữ trắng */
+  border: none; /* Không có viền */
+  border-radius: 8px !important; /* Góc bo tròn */
+  padding: 8px 16px; /* Kích thước padding */
+  font-weight: 500; /* Chữ in vừa */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng hover */
+  margin-top: 0px;
+}
+
+/* Hover cho nút "Thêm" */
+.add-btn:hover {
+  background-color: rgba(27,119,254,255); /* Màu nền xanh nhạt hơn khi hover */
+} 
+.logo-image1 {
+  width: 30px; /* Kích thước logo */
+  height: auto;
+  left: 650px;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 750px;
+}
+.logo-image2 {
+  width: 30px; /* Kích thước logo */
+  height: auto;
+  left: 1400px;
+  margin-left: -50px;
+  position: absolute;
+  margin-top: -40px;
+  
+}
+.titlee {
+  font-size: 30px !important;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+}

@@ -1,0 +1,95 @@
+.service-modal {
+    width: 1100px !important;
+    margin-left: 270px;
+    z-index: 1001 !important;
+}
+.service-modal .ant-modal {
+    max-width: 1000px !important; /* Đảm bảo modal có kích thước hợp lý */
+}
+
+.service-modal .ant-modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.service-modal .ant-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+}
+
+/* Input styling */
+.service-modal input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.service-modal input:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Custom table container */
+.custom-table-container {
+    width: 1000px !important; /* Giới hạn chiều cao của bảng */
+    overflow-y: auto; /* Thêm thanh cuộn nếu bảng vượt chiều cao */
+}
+
+.custom-table-container .ant-table {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+}
+
+.custom-table-container .ant-table-thead > tr > th {
+    font-weight: 600;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.custom-table-container .ant-table-tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.custom-table-container .ant-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effects for rows */
+.custom-table-container .ant-table-tbody > tr:hover > td {
+    background-color: #e6f7ff;
+}
+.service-modal .ant-table-body {
+    overflow-y: auto !important;
+    max-height: 350px !important;
+}
+
+.service-modal .ant-table-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+}
+
+/* Tùy chỉnh thanh cuộn */
+.service-modal .ant-table-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.service-modal .ant-table-body::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 3px;
+}
+
+.service-modal .ant-table-body::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}

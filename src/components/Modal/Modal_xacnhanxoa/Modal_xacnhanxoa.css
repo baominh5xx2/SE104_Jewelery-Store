@@ -1,0 +1,12 @@
+/* DeleteConfirmationModal.css */
+ttcc{
+/* Căn chỉnh văn bản trong modal */
+.delete-modal-message {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+}
+/* Tùy chỉnh thêm nếu cần */

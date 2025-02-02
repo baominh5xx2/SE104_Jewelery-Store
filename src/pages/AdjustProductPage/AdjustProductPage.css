@@ -1,0 +1,428 @@
+  /* AddProductPage.css */
+  .app-layout-container-adjust{
+    margin-top: 30px;
+    .section {
+        border-radius: 8px;
+    }.body_them{
+      margin-top: -30px;
+    }
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px; /* Adjust the padding as needed */
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .select1 {
+        border-radius: 8px !important;
+    }
+  
+    .header-actions {
+        margin-left: 780px;
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .form-wrapper {
+        width: 100%;
+        max-width: 600px; /* Adjust the max-width as needed */
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .form-group {
+        margin-bottom: 15px;
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px; /* Bo tròn khung */
+    }
+  
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        border: none;
+        border-radius: 8px; /* Bo tròn khung */
+        cursor: pointer;
+    }
+  
+    .button:hover {
+        background-color: #0056b3;
+    }
+    /* Thêm vào file AddProductPage.css */
+  
+    /* Bo tròn cho tất cả input của Ant Design */
+    .ant-input {
+        border-radius: 8px !important;
+      }
+      
+      /* Bo tròn cho select của Ant Design */
+      .ant-select-selector {
+        border-radius: 8px !important;
+      }
+      
+      /* Bo tròn cho textarea của Ant Design */
+      .ant-input-textarea {
+        border-radius: 8px !important;
+      }
+      
+      /* Bo tròn cho input number của Ant Design */
+      .ant-input-number {
+        border-radius: 8px !important;
+      }
+      
+      /* Bo tròn cho input search của Ant Design */
+      .ant-input-search {
+        border-radius: 8px !important;
+      }
+      
+      /* Bo tròn cho input affix (có prefix hoặc suffix) */
+      .ant-input-affix-wrapper {
+        border-radius: 8px !important;
+      }
+    .app-layout {
+        max-width: 1400px;
+        margin-left: 20px;
+        overflow: hidden;
+        border-radius: 8px; /* Bo tròn khung */
+    }
+      /* Upload Box */
+      .upload-box {
+        border: 2px dashed #d9d9d9;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        background: #fafafa;
+        transition: background 0.3s;
+      }
+  
+    .phan_tram_input {
+        height: 40px; /* Chiều cao */
+        display: flex; /* Flexbox để căn chỉnh */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        text-align: center; /* Căn giữa văn bản */
+        padding: 0; /* Loại bỏ padding nếu cần */
+        overflow: hidden; /* Tắt thanh trượt ngang và dọc */
+        white-space: nowrap; /* Ngăn văn bản xuống dòng */
+        border-radius: 8px; /* Bo tròn khung */
+    } 
+    .section {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      /* Main Content */
+    .app-content {
+        flex-grow: 1;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-left: 300px;
+        height: calc(100vh - 60px); /* Chiều cao tối đa */
+        overflow-y: auto; /* Kích hoạt cuộn dọc */
+        overflow-x: hidden; /* Ẩn cuộn ngang nếu không cần thiết */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        overflow-y: scroll;
+      }
+      
+      /* Breadcrumb Container */
+      .breadcrumb-container {
+        margin-bottom: 24px; /* Khoảng cách dưới Breadcrumb */
+      }
+      
+      .ant-breadcrumb {
+        font-size: 14px;
+        color: #595959;
+      }
+      
+      .ant-breadcrumb a {
+        color: #1890ff;
+      }
+      
+      .ant-breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      
+      .ant-breadcrumb-item {
+        color: #595959;
+        font-weight: 400;
+      }
+      
+      /* Title */
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      /* Header Actions */
+      .header-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 20px;
+        margin-left: -80px;
+      }
+      
+      .action-btn {
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 10px 20px;
+      }
+      
+      .action-btn:first-child {
+        background: #f4f6f9;
+        border: 1px solid #d9d9d9;
+        color: #333;
+      }
+      
+      .action-btn:first-child:hover {
+        background: #e6e6e6;
+      }
+      
+      .action-btn:last-child {
+        background: #0050b3;
+        border: none;
+        color: #ffffff;
+      }
+      
+      .action-btn:last-child:hover {
+        background: #004a93;
+      }
+      
+      /* Section Styles */
+      .section {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .section_gia {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      
+      }
+      .gia_nhap input {
+        text-align: left; /* Căn giữa nội dung văn bản */
+        margin-top: 15px;
+      }
+      .gia_nhap{
+        height: 50px;
+      }
+      .gia_nhap .ant-input-prefix {
+        display: flex;
+        align-items: center;
+      }
+      .phan_tram_input input{
+        margin-top: 15px;
+      }
+      .phan_tram_input {
+        height: 40px; /* Chiều cao */
+        display: flex;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        text-align: center; /* Văn bản placeholder ở giữa */
+        padding: 0; /* Loại bỏ padding mặc định */
+        height: 30px !important;
+      }
+      .checkboxxx {
+        margin-bottom: 16px;
+      }
+      
+      .checkboxxx .ant-checkbox-wrapper {
+        display: flex; /* Đặt flexbox để checkbox và chữ nằm ngang hàng */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        gap: 8px; /* Tạo khoảng cách giữa checkbox và chữ */
+      }
+      
+      .checkboxxx .ant-checkbox + span {
+        line-height: 1.5; /* Đặt line-height phù hợp với chiều cao */
+      }
+      
+      .phan_tram_input .ant-input-prefix {
+        display: flex;
+        align-items: center; /* Đảm bảo prefix được căn giữa dọc */
+      }
+      
+      .section_LG,
+      .section_LG2 {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .section_LG2 {
+        margin-top: -10px;
+      }
+      
+      .section h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        color: #333;
+      }
+      
+  
+      
+      .upload-box:hover {
+        background: #f0f0f0;
+      }
+      
+      .upload-box p {
+        color: #666;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      /* Select Boxes */
+      .ant-select {
+        width: 100%;
+      }
+      .ant-input{
+        width: 100%;
+      }
+      .ant-select-selector {
+        border-radius: 8px !important;
+      }
+      .ant-input-selector {
+        border-radius: 8px !important;
+      }
+      
+      /* Save Button */
+      .save-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      
+      .save-btn {
+        width: 200px;
+        font-weight: bold;
+        background: #0050b3;
+        border: none;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 12px;
+      }
+      
+      .save-btn:hover {
+        background: #004a93;
+        color: #ffffff;
+      }
+      
+      /* Classification and Status */
+      .classification-status {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      
+      .classification-status .section {
+        margin-bottom: 0;
+      }
+      
+      .tag-status {
+        font-size: 14px;
+        padding: 2px 8px;
+        border-radius: 8px;
+      }
+      
+      .ant-tag-blue {
+        background: #e6f7ff;
+        color: #0050b3;
+      }
+      
+      /* Checkbox Styles */
+      .ant-checkbox-wrapper {
+        margin-top: 10px;
+      }
+      
+      .ant-checkbox + span {
+        font-weight: bold;
+        color: #333;
+      }
+      
+      /* Button Styles */
+      .add-attribute-btn {
+        margin-top: 10px;
+        background: #ffffff;
+        border: 1px solid #d9d9d9;
+        color: #333;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .add-attribute-btn:hover {
+        background: #f5f5f5;
+        border-color: #bfbfbf;
+      }
+      
+      /* Row and Column Gaps */
+      .ant-row {
+        margin-bottom: 16px;
+      }
+      
+      .ant-row:last-child {
+        margin-bottom: 0;
+      }
+  
+      .title_normal {
+        margin: auto;
+      }
+      .logo-image {
+        width: 50px;
+      }
+      .title-container {
+        display: flex;
+        align-items: center;
+        position: relative; /* Add relative positioning to container */
+        margin-right: 100px; /* Add space for fixed logos */
+        padding-right: 120px;
+      }
+      
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0; /* Loại bỏ khoảng cách mặc định */
+      }
+      
+      .logo-image111 {
+        width: 30px;
+        height: 30px;
+        position: absolute; /* Change to absolute positioning */
+        right: -40px; /* Position from right of container */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
+      }
+      .logo-image211 {
+        width: 30px;
+        height: 30px;
+        position: absolute; /* Change to absolute positioning */
+        right: -90px; /* Position from right of container */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);  
+      }
+  }

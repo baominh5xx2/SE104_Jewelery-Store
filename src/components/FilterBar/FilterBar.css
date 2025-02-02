@@ -1,0 +1,80 @@
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px !important;
+    border-radius: 8px;
+    margin-top: -20px;
+    margin-left: 330px;
+    width: 1120px;
+  }
+  
+  /* Container của các tab */
+  /* Tabs container */
+  .tabs {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các tab */
+  }
+  
+  /* Tab button mặc định */
+  .tab {
+    padding: 5px 20px;
+    border: 1px solid #cbcbcb; /* Viền xám nhạt */
+    border-radius: 10px; /* Góc bo tròn */
+    background-color: #cbcbcb; /* Nền xám nhạt */
+    color: #333; /* Chữ xám đậm */
+    cursor: pointer; /* Trỏ chuột dạng nhấn */
+    transition: all 0.3s ease; /* Hiệu ứng hover */
+    font-size: 12px; /* Kích thước chữ */
+    text-align: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    height: 30px;
+    margin-top: -15px;
+  }
+  
+  /* Tab đang active */
+  .tab.active {
+    background-color: rgba(27,119,254,255); /* Nền xanh đậm */
+    color: #ffffff; /* Chữ trắng */
+    border-color: rgba(27,119,254,255); /* Viền xanh đậm */
+    font-weight: 600; /* Chữ đậm hơn */
+  }
+  
+  /* Hiệu ứng hover cho tab chưa active */
+  .tab:hover {
+    background-color: #1c4f67; /* Nền xanh nhạt khi hover */
+    border-color: rgba(27,119,254,255); /* Viền xanh nhạt khi hover */
+  }
+  
+  
+  
+  /* Filter Actions */
+  .filter-actions {
+    display: flex;
+    gap: 10px;
+    width: 400px;
+  }
+  
+  .filter-actions .ant-input {
+    border-radius: 8px;
+    margin-left: -150px;
+    height: 30px;
+  }
+  
+  .filter-actions .ant-picker {
+    border-radius: 8px;
+    height: 30px;
+    
+  }
+  
+  .filter-actions .ant-btn {
+    border-radius: 8px;
+    background-color: rgba(27,119,254,255);
+    color: #fff;
+  }
+  
+  .filter-actions .ant-btn:hover {
+    background-color: rgba(27,119,254,255);
+    
+  }

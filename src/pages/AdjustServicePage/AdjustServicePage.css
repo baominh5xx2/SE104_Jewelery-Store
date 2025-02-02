@@ -1,0 +1,546 @@
+.app-layout-adjust-servicessss {
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    .bod{
+    /* Global Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+        /* Body Styles */
+        body {
+            min-height: 100vh;
+            background: #f4f6f9; /* Màu nền dịu mắt */
+            color: #333;
+        }
+
+        /* App Layout */
+        .app-layout {
+            height: 100vh;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .app-sider {
+            background: #0050b3;
+            color: #ffffff;
+            width: 250px; /* Độ rộng sidebar cố định */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo img {
+            width: 180px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .ant-menu-dark .ant-menu-item {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .ant-menu-dark .ant-menu-item-selected {
+            background-color: #003a75; /* Màu khi chọn mục */
+        }
+
+        .ant-menu-dark .ant-menu-item:hover {
+            background-color: #004a93; /* Hiệu ứng hover */
+        }
+
+        /* Main Content */
+        .app-content {
+            flex-grow: 1;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 300px;
+            height: calc(100vh - 60px); /* Chiều cao tối đa */
+            overflow-y: auto; /* Kích hoạt cuộn dọc */
+            overflow-x: hidden; /* Ẩn cuộn ngang nếu không cần thiết */
+            margin-top: 10px;
+            padding: 24px;
+            background-color: white;
+        }
+
+        /* Breadcrumb Container */
+        .breadcrumb-container {
+            margin-bottom: 24px; /* Khoảng cách dưới Breadcrumb */
+        }
+
+        .ant-breadcrumb {
+            font-size: 14px;
+            color: #595959;
+        }
+
+        .ant-breadcrumb a {
+            color: #1890ff;
+        }
+
+        .ant-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .ant-breadcrumb-item {
+            color: #595959;
+            font-weight: 400;
+        }
+
+        /* Title */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            width: 100%;
+            margin: 0;
+        }
+
+        /* Header Actions */
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+        }
+
+        /* Update existing styles */
+        .action-btnt {
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 10px 20px;
+            text-align: center; /* Center text horizontally */
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            min-width: 120px;
+            border-radius: 8px;
+        }
+
+        /* If you want to center text in other elements as well, add these classes */
+        .input,
+        .ant-select,
+        .ant-select-selector,
+        .ant-input {
+            text-align: center;
+        }
+
+        /* For table cells */
+        .ant-table-cell {
+            text-align: center;
+        }
+
+        .action-btnt:first-child {
+            background: #f4f6f9;
+            border: 1px solid #d9d9d9;
+            color: #333;
+        }
+
+        .action-btnt:first-child:hover {
+            background: #e6e6e6;
+        }
+
+        .action-btnt:last-child {
+            background: #0050b3;
+            border: none;
+            color: #ffffff;
+        }
+
+        .action-btnt:last-child:hover {
+            background: #004a93;
+        }
+
+        /* Section Styles */
+        .section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-top: -20px;
+            font-family: "Roboto", sans-serif;
+            margin-bottom: -30px;
+        }
+
+        .section_gia,
+        .section_LG,
+        .section_LG2 {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section_LG2 {
+            margin-top: -10px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        /* Upload Box */
+        .upload-box {
+            border: 2px dashed #d9d9d9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            background: #fafafa;
+            transition: background 0.3s;
+        }
+
+        .upload-box:hover {
+            background: #f0f0f0;
+        }
+
+        .upload-box p {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* Inputs and Labels */
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #bfbfbf;
+            font-style: italic;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #d9d9d9;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0050b3;
+            box-shadow: 0 0 3px rgba(0, 80, 179, 0.2);
+        }
+
+        /* Select Boxes */
+        .ant-select {
+            width: 100%;
+        }
+
+        .ant-select-selector {
+            border-radius: 8px !important;
+            padding: 10px !important;
+        }
+
+        /* Save Button */
+        .save-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .save-btn {
+            width: 200px;
+            font-weight: bold;
+            background: #0050b3;
+            border: none;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .save-btn:hover {
+            background: #004a93;
+            color: #ffffff;
+        }
+
+        /* Classification and Status */
+        .classification-status {
+            display: flex;
+            margin-bottom: 50px;
+            font-family: "Playfair Display", serif;
+        }
+
+        .classification-status .section {
+            margin-bottom: 0;
+        }
+
+        .tag-status {
+            font-size: 14px;
+            padding: 2px 8px;
+            border-radius: 8px;
+        }
+
+        .ant-tag-blue {
+            background: #e6f7ff;
+            color: #0050b3;
+        }
+
+        /* Checkbox Styles */
+        .ant-checkbox-wrapper {
+            margin-top: 10px;
+        }
+
+        .ant-checkbox + span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Button Styles */
+        .add-attribute-btn {
+            margin-top: 10px;
+            background: #ffffff;
+            border: 1px solid #d9d9d9;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .add-attribute-btn:hover {
+            background: #f5f5f5;
+            border-color: #bfbfbf;
+        }
+
+        /* Row and Column Gaps */
+        .ant-row {
+            margin-bottom: 16px;
+        }
+
+        .ant-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .header-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .save-btn {
+                width: 100%;
+            }
+        }
+        .title_normal {
+            margin: auto;
+        }
+        .logo-image {
+            width: 50px;
+        }
+        .title-container {
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 10px; /* Khoảng cách giữa logo và tiêu đề */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0; /* Loại bỏ khoảng cách mặc định */
+        }
+
+        .title_1 {
+            font-size: 16px;
+        }
+        .title_DV {
+            font-size: 24px;
+        }
+        .titlee {
+            font-size: 40px;
+        }
+        .delete {
+            margin-left: -300px;
+            color: #ff4d4f;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .delete:hover {
+            color: #ff7875;
+        }
+        /* CSS cho nút thanh toán */
+        .payment-button {
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-weight: 600;
+            border: none;
+            text-align: center; /* Center text horizontally */
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            min-width: 140px;
+            border-radius: 8px;
+        }
+
+        .payment-button.default {
+            background: #f4f6f9;
+            color: #333;
+            border: 1px solid #d9d9d9;
+        }
+
+        .payment-button.primary {
+            background: #0050b3;
+            color: #ffffff;
+            background-color: #1890ff;
+            color: white;
+        }
+
+        .payment-button.primary:hover {
+            background: #bebfc1;
+        }
+        /* Add a container with relative positioning */
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .logo-image11 {
+            width: 30px;
+            height: auto;
+            margin-left: 430px !important;
+            position: sticky; /* Change to sticky position */
+            top: 100px;
+            z-index: 100;
+        }
+
+        .logo-image21 {
+            width: 30px;
+            height: auto;
+            left: 1330px;
+            position: sticky; /* Change to sticky position */
+            top: 100px;
+            z-index: 100;
+        }
+        .invoice-checkbox-container {
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 8px; /* Khoảng cách giữa Checkbox và tiêu đề */
+            margin-top: 16px;
+        }
+
+        .invoice-checkbox-label {
+            margin-top: -25px;
+            font-size: 16px; /* Kích thước chữ */
+            color: #000; /* Màu sắc tiêu đề */
+        }
+
+        /* Cập nhật style cho logo images */
+        .logo-imag1 {
+            width: 30px;
+            height: auto;
+            margin-left: 160px;
+            position: sticky;
+        }
+
+        .logo-imag2 {
+            width: 30px;
+            height: auto;
+            margin-right: -190px !important;
+            position: sticky;
+        }
+
+        /* Thêm style cho scrollable container */
+        div::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        div::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        div::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        div::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .custom-select .ant-select-selection-item {
+            color: black !important;
+            text-align: center !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10001 !important;
+        }
+
+        .ant-select-dropdown .ant-select-item {
+            color: black !important;
+            text-align: center !important;
+        }
+
+        /* Căn giữa arrow icon */
+        .custom-select .ant-select-arrow {
+            margin-top: -7px !important;
+        }
+
+        /* Thêm style cho Select container */
+        .ant-select-selector {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 100% !important;
+        }
+
+        /* Đảm bảo dropdown options hiển thị đầy đủ */
+        .ant-select-dropdown {
+            z-index: 10002 !important;
+        }
+    }
+}
+.app-layout-ser {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.app-content {
+    margin-left: 270px; /* Match sidebar width */
+    padding: 20px;
+    width: calc(100% - 270px); /* Full width minus sidebar */
+}
+
+.section {
+    width: 100% !important; /* Override inline styles */
+    margin-bottom: 20px;
+}
+
+/* Update other container widths */
+.classification-status .ant-col {
+    width: 100%;
+}
+
+.payment-section,
+.customer-section {
+    width: 100% !important;
+}

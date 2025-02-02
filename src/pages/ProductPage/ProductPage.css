@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+.order-table-container1 {
+  margin-left: 270px; /* Revert margin-left to match OrderProductPage */
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+
+  /* Table container */
+  .ant-table-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide both scrollbars */
+  }
+  .table-containerr {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .detail{
+    margin-left: 60px;
+  }
+  /* Add this to ensure proper table layout */
+  .ant-table {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow-x: hidden !important; /* Hide horizontal scrollbar */
+    table-layout: fixed;  /* Add this to ensure equal column distribution */
+    
+
+    .ant-table-thead > tr > th {
+      text-align: left;
+      padding: 16px 8px;
+    }
+
+    .ant-table-tbody > tr > td {
+      text-align: left;
+      padding: 16px 8px;
+    }
+
+    /* Add these new styles for checkbox alignment */
+    .ant-table-selection-column {
+      text-align: left;
+    }
+
+    .ant-table-selection-column .ant-checkbox-wrapper {
+      width: 10px;
+    }
+  }
+
+  .ant-table-cell {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .ant-table-body {
+    overflow: hidden !important; /* Hide both scrollbars */
+  }
+
+  .ant-table-container {
+    overflow: hidden !important; /* Hide both scrollbars */
+  }
+
+  /* Header styling */
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      width: 100%;
+    }
+  }
+
+  /* Filter section styling */
+  .filter-section {
+    display: flex;
+    justify-content: flex-end;  /* Thay đổi từ space-between thành flex-end */
+    margin-bottom: 20px;
+
+    .filter-button {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .delete-all-button {
+      margin-left: auto;
+      margin-bottom: -20px; /* Thêm margin-left: auto để đẩy button về phía phải */
+    }
+  }
+
+  /* Button styling */
+  .export-button {
+    background-color: #cdd1ff;
+    color: #091057;
+    border: none;
+    &:hover {
+      background-color: #091057;
+      color: white;
+    }
+  }
+
+  .add-product-button {
+    background-color: #091057;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: #cdd1ff;
+      color: #091057;
+    }
+  }
+}
+
+/* ...existing styles... */
+
+.ant-table-filter-dropdown {
+  min-width: 200px;
+}
+
+.ant-table-filter-dropdown .ant-dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.ant-tag {
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.ant-table-row.deleted-product {
+    opacity: 0.6;
+    background-color: #f5f5f5;
+}
+
+.ant-table-row.deleted-product:hover {
+    opacity: 0.8;
+}
+
+.ant-btn.ant-btn-primary:hover {
+    background: #1890ff !important;
+    color: white !important;
+    border-color: #1890ff !important;
+}

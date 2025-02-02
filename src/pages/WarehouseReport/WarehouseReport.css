@@ -1,0 +1,24 @@
+/* src/pages/WarehouseReport/WarehouseReport.css */
+.warehouse-report-container {
+  margin: 24px 24px 24px 294px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f8f9ff !important;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #f0f5ff !important;
+}

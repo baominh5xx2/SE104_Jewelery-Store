@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:wght@200..1000&family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+/* MAIN */
+
+
+#content main {
+	width: 100%;
+	padding: 36px 24px;
+	font-family: var(--poppins);
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
+}
+#content main .head-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 16px;
+	flex-wrap: wrap;
+}
+#content main .head-title .left h1 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: var(--dark);
+}
+#content main .head-title .left .breadcrumb {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+}
+#content main .head-title .left .breadcrumb li {
+	color: var(--dark);
+}
+#content main .head-title .left .breadcrumb li a {
+	color: var(--dark-grey);
+	pointer-events: none;
+}
+#content main .head-title .left .breadcrumb li a.active {
+	color: var(--blue);
+	pointer-events: unset;
+}
+#content main .head-title .btn-download {
+	height: 36px;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--blue);
+	color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+}
+
+
+
+
+#content main .box-info {
+	display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+}
+#content main .box-info li {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+#content main .box-info li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content main .box-info li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--blue);
+}
+#content main .box-info li:nth-child(2) .bx {
+	background: var(--light-yellow);
+	color: var(--yellow);
+}
+#content main .box-info li:nth-child(3) .bx {
+	background: var(--light-orange);
+	color: var(--orange);
+}
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-info li .text p {
+	color: var(--dark);	
+}
+
+.box-info {
+    text-align: center; /* Canh giữa các phần tử */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*border quanh tổng quát số liệu*/
+.info-container {
+    border: 1px solid #bfbebe6b; /* Đường viền màu xám nhạt */
+    border-radius: 16px; /* Bo góc đường viền */
+    padding: 3px; /* Khoảng cách bên trong để tạo khoảng trống giữa viền và nội dung */
+    margin: 3px ; /* Khoảng cách bên ngoài (tùy chỉnh) */
+    background-color: #fff; /* Màu nền (tùy chọn) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng (tùy chọn) */
+    text-align: center;
+    height: fit-content;
+}
+
+/*Đơn hàng gần đây*/
+
+#content main .table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .table-data > div {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+}
+#content main .table-data .head {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+	margin-bottom: 24px;
+}
+#content main .table-data .head h3 {
+	margin-right: auto;
+	font-size: 28px;
+	font-weight: 600;
+}
+#content main .table-data .head .bx {
+	cursor: pointer;
+}
+
+#content main .table-data .order {
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+#content main .table-data .order table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#content main .table-data .order table th {
+	padding-bottom: 12px;
+	font-size: 15px;
+	text-align: left;
+	border-bottom: 1px solid var(--grey);
+}
+#content main .table-data .order table td {
+	padding: 16px 0;
+}
+#content main .table-data .order table tr td:first-child {
+	display: flex;
+	align-items: center;
+	grid-gap: 12px;
+	padding-left: 6px;
+}
+#content main .table-data .order table td img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+#content main .table-data .order table tbody tr:hover {
+	background: var(--grey);
+}
+#content main .table-data .order table tr td .status {
+	font-size: 12px;
+	padding: 6px 16px;
+color: var(--light);
+	border-radius: 20px;
+	font-weight: 700;
+}
+#content main .table-data .order table tr td .status.completed {
+	background: var(--blue);
+}
+#content main .table-data .order table tr td .status.process {
+	background: var(--yellow);
+}
+#content main .table-data .order table tr td .status.pending {
+	background: var(--orange);
+}
+
+
+#content main .table-data .todo {
+	flex-grow: 1;
+	flex-basis: 300px;
+}
+#content main .table-data .todo .todo-list {
+	width: 100%;
+}
+#content main .table-data .todo .todo-list li {
+	width: 100%;
+	margin-bottom: 16px;
+	background: var(--grey);
+	border-radius: 10px;
+	padding: 14px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#content main .table-data .todo .todo-list li .bx {
+	cursor: pointer;
+}
+#content main .table-data .todo .todo-list li.completed {
+	border-left: 10px solid var(--blue);
+}
+#content main .table-data .todo .todo-list li.not-completed {
+	border-left: 10px solid var(--orange);
+}
+#content main .table-data .todo .todo-list li:last-child {
+	margin-bottom: 0;
+}
+
+.order {
+    border: 1px solid #bfbebe6b; /* Đường viền màu xám nhạt */
+    border-radius: 16px; /* Bo góc đường viền */
+    padding: 20px; /* Khoảng cách bên trong để tạo khoảng trống giữa viền và nội dung */
+    margin: 20px 0; /* Khoảng cách bên ngoài (tùy chỉnh) */
+    background-color: #fff; /* Màu nền */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+
+.filter-options {
+    margin: 10px 0;
+}
+
+.filter-options select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.status-button1 {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-button2 {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-button3 {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* MAIN */
+/* CONTENT */
+/* Cấu hình cho container */
+.info-container {
+    display: flex;  /* Sử dụng Flexbox cho toàn bộ container */
+    justify-content: center;  /* Căn giữa các phần tử con trong container */
+    align-items: center;  /* Căn giữa các phần tử theo chiều dọc */
+    padding: 20px;  /* Khoảng cách padding cho container */
+    width: 100%;  /* Chiếm toàn bộ chiều rộng */
+  }
+  
+  /* Cấu hình cho <ul> */
+  .box-info {
+    display: flex;  /* Dùng Flexbox cho <ul> */
+    justify-content: space-between;  /* Căn đều khoảng cách giữa các <li> */
+    list-style-type: none;  /* Xóa bỏ dấu chấm đầu dòng */
+    padding: 0;  /* Xóa padding mặc định */
+    width: 100%;  /* Đảm bảo <ul> chiếm hết chiều rộng */
+    max-width: 800px;  /* Điều chỉnh chiều rộng tối đa của danh sách để không bị quá rộng */
+  }
+  
+  /* Cấu hình cho mỗi <li> */
+  .box-info li {
+    display: flex;  /* Dùng Flexbox cho mỗi <li> */
+    flex: 1;  /* Làm cho các <li> chiếm không gian ngang đều */
+    justify-content: center;  /* Căn giữa icon và văn bản trong mỗi <li> */
+    align-items: center;  /* Căn giữa theo chiều dọc */
+    text-align: center;  /* Căn giữa văn bản trong mỗi <li> */
+    padding: 20px;  /* Khoảng cách bên trong mỗi <li> */
+  }
+  
+  /* Cấu hình cho icon */
+  .material-icons-outlined {
+    font-size: 30px;  /* Điều chỉnh kích thước icon */
+    margin-right: 10px;  /* Khoảng cách giữa icon và văn bản */
+  }
+  
+  /* Cấu hình cho phần văn bản */
+  .text h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .text p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .info-list {
+    display: flex;
+    justify-content: space-between;  /* Căn đều khoảng cách giữa các phần tử */
+    list-style-type: none;  /* Bỏ dấu chấm đầu dòng */
+    padding: 0;  /* Xóa bỏ padding mặc định */
+  }
+  
+  .info-list li {
+    display: flex;
+    align-items: center;  /* Căn giữa icon và text theo chiều dọc */
+  }
+  
+  .material-icons-outlined {
+    font-size: 30px;  /* Điều chỉnh kích thước icon nếu cần */
+    margin-right: 10px;  /* Khoảng cách giữa icon và text */
+  }
+  
+  .text h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .text p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  
+  .icon {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 20px;
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 26px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+  
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+  }
+
+  /* Main  */  
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding-left: 260px;
+  margin: 15px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: #7EACB5;
+  
+}
+
+.card:nth-child(2) {
+  background-color: #FDDBBB;
+}
+
+.card:nth-child(3) {
+  background-color: #FADFA1;
+}
+
+.card:nth-child(4) {
+  background-color: #C96868;
+  
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  
+}
+
+.card-inner > .card_icon {
+  font-size: 35px;
+  
+}
+
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  padding-left: 250px;
+  height: 300px;
+}
+
+.chart-line {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  padding-left: 250px;
+  height: 300px;
+}
+
+.chart-below {
+  font-weight: 500;
+  padding-top: 200px;
+  padding-left: 250px;
+}
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
